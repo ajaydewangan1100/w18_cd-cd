@@ -36,7 +36,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull 100xdevs/week18-class-user-app:latest
+            sudo docker pull ajaydewangan1100/week18-class-user-app:latest
             sudo docker stop user-app-w18 || true
             sudo docker rm user-app-w18 || true
-            sudo docker run -d --name user-app-w18 -p 3005:3000 100xdevs/week18-class-user-app:latest
+            sudo docker run -d --name user-app-w18 -p 3005:3000 ajaydewangan1100/week18-class-user-app:latest
