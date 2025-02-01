@@ -25,6 +25,8 @@ jobs:
           file: ./docker/Dockerfile.user
           push: true
           tags: ajaydewangan1100/week18-class-user-app:latest # Replace with your Docker Hub username and repository
+          cache-from: type=registry,ref=ajaydewangan1100/week18-class-user-app:latest
+          cache-to: type=inline
 
       - name: Verify Pushed Image
         run: docker pull ajaydewangan1100/week18-class-user-app:latest # Replace with your Docker Hub username and repository
